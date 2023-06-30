@@ -30,10 +30,10 @@ const wrapperId = "typing-wrapper"; // id of the wrapper element in your HTML
 
 // Customize options if needed (optional)
 const options = {
-  textColor: "blue",
+  textColor: "black",
   cursorColor: "white",
   width: "2px",
-  height: "2rem",
+  height: "1rem",
 };
 
 // Customize typing and deleting speeds (optional)
@@ -57,10 +57,10 @@ The typingEffect function accepts the following parameters:
 - arrayOfWords (array): An array of words to be typed out.
 - wrapperId (string): The ID of the HTML element that will contain the typewriter effect.
 - options (object, optional): An object that specifies additional options for the typewriter effect. It can have the following properties:
-- textColor (string, default: "blue"): The color of the typed text.
+- textColor (string, default: "black"): The color of the typed text.
 - cursorColor (string, default: "white"): The color of the typing cursor.
 - width (string, default: "2px"): The width of the typing cursor.
-- height (string, default: "2rem"): The height of the typing cursor.
+- height (string, default: "1rem"): The height of the typing cursor.
 - forwardSlashSpeed (number, default: 118): The speed of typing forward slash characters (in milliseconds).
 - backwardSlashSpeed (number, default: 65): The speed of typing backward slash characters (in milliseconds).
 

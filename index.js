@@ -2,23 +2,25 @@ function typingEffect(
   arrayOfWords,
   wrapperId,
   options = {
-    textColor: "blue",
+    textColor: "black",
     cursorColor: "white",
     width: "2px",
-    height: "2rem",
+    height: "1rem",
   },
   forwardSlashSpeed = 118,
   backwardSlashSpeed = 60,
   infinite = true
 ) {
   const wrapper = document.getElementById(wrapperId);
+  wrapper.style.display = "flex";
+  wrapper.style.alignItems = "center";
   const text = document.createElement("p");
   const cursor = document.createElement("span");
-  text.style.color = options.textColor || "blue";
+  text.style.color = options.textColor || "black";
   cursor.style.backgroundColor = options.cursorColor || "white";
   cursor.style.marginLeft = "0.25rem";
   cursor.style.width = options.width || "2px";
-  cursor.style.height = options.height || "2rem";
+  cursor.style.height = options.height || "1rem";
   cursor.animate(
     { opacity: [0, 1] },
     { duration: 1000, iterations: Infinity, easing: "linear" }
