@@ -12,7 +12,7 @@
 
 ## Installation
 
-You can install `simple-typingE-effect` via npm by running the following command:
+You can install `simple-typing-effect` via npm by running the following command:
 
 ```shell
 npm install simple-typing-effect
@@ -23,10 +23,10 @@ npm install simple-typing-effect
 To use simple-typing-effect, you need to import the package and call the typingEffect function with the required parameters.
 
 ```javascript
-import typingEffect from "typing-effect";
+import typingEffect from "simple-typing-effect";
 
-const arrayOfWords = ["Hello", "World", "simple-typing-effect npm package"];
-const wrapperId = "typing-wrapper";
+const arrayOfWords = ["Hello", "World", "simple-typing-effect", "npm package"];
+const wrapperId = "typing-wrapper"; // id of the wrapper element in your HTML
 
 // Customize options if needed (optional)
 const options = {
@@ -69,16 +69,16 @@ The typingEffect function accepts the following parameters:
 Here's an example of how to use typingEffect:
 
 ```javascript
-import typingEffect from "typing-effect";
+import typingEffect from "simple-typing-effect";
 
-const arrOfWords = [
+const arrayOfWords = [
   "Welcome",
   "to",
   "the",
   "simple-typing-effect",
   "npm package",
 ];
-const wrapperId = "typing-wrapper";
+const wrapperId = "typing-wrapper"; // id of the wrapper element in your HTML
 
 // Customize options (optional)
 const options = {
@@ -94,7 +94,7 @@ const backwardSlashSpeed = 80;
 
 // Call the typingEffect function with the provided parameters
 typingEffect(
-  arrOfWords,
+  arrayOfWords,
   wrapperId,
   options,
   forwardSlashSpeed,
