@@ -1,8 +1,14 @@
-# simple-typing-effect Package Documentation
+# SimpleTypingEffect NPM Package Documentation
 
-# simple-typing-effect
+`simple-typing-effect` is an npm package that provides a function for creating a typewriter effect on a web page. It simulates the appearance of typing and deleting text, creating a dynamic and engaging user experience.
 
-`simple-typing-effect` is an npm package that provides a function for creating a typewriter effect on a web page.
+## Table of Contents
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Parameters](#parameters)
+4. [Example](#example)
+5. [Credits](#credits)
 
 ## Installation
 
@@ -12,36 +18,37 @@ You can install `simple-typingE-effect` via npm by running the following command
 npm install simple-typing-effect
 ```
 
-```javascript
-function typingEffect(
-  arrayOfWords,
-  wrapperId,
-  options = {
-    textColor: "blue",
-    cursorColor: "white",
-    width: "2px",
-    height: "2rem",
-  },
-  forwardSlashSpeed = 118,
-  backwardSlashSpeed = 65
-) {...}
-```
-
-## Parameters
-
-- arrayOfWords (array): An array containing the words to be displayed with the typing effect.
-- wrapperId (string): The id of the HTML element that will contain the typing effect.
-- options (object, optional): An object that configures the appearance of the typing effect. It can have the following properties:
-  - textColor (string, default: "blue"): The color of the text.
-  - cursorColor (string, default: "white"): The color of the cursor.
-  - width (string, default: "2px"): The width of the cursor.
-  - height (string, default: "2rem"): The height of the cursor.
-- forwardSlashSpeed (number, default: 118): The speed at which the text is revealed (in milliseconds) when typing forward.
-- backwardSlashSpeed (number, default: 65): The speed at which the text is deleted (in milliseconds) when typing backward.
-
 ## Usage
 
 To use simple-typing-effect, you need to import the package and call the typingEffect function with the required parameters.
+
+```javascript
+import typingEffect from "typing-effect";
+
+const arrayOfWords = ["Hello", "World", "simple-typing-effect npm package"];
+const wrapperId = "typing-wrapper";
+
+// Customize options if needed (optional)
+const options = {
+  textColor: "blue",
+  cursorColor: "white",
+  width: "2px",
+  height: "2rem",
+};
+
+// Customize typing and deleting speeds (optional)
+const forwardSlashSpeed = 118;
+const backwardSlashSpeed = 65;
+
+// Call the typingEffect function with the provided parameters
+typingEffect(
+  arrayOfWords,
+  wrapperId,
+  options,
+  forwardSlashSpeed,
+  backwardSlashSpeed
+);
+```
 
 ## Parameters
 
@@ -62,20 +69,41 @@ The typingEffect function accepts the following parameters:
 Here's an example of how to use typingEffect:
 
 ```javascript
-const typingEffect = require("typing-effect");
+import typingEffect from "typing-effect";
 
+const arrOfWords = [
+  "Welcome",
+  "to",
+  "the",
+  "simple-typing-effect",
+  "npm package",
+];
+const wrapperId = "typing-wrapper";
+
+// Customize options (optional)
+const options = {
+  textColor: "purple",
+  cursorColor: "red",
+  width: "3px",
+  height: "1.5rem",
+};
+
+// Customize typing and deleting speeds (optional)
+const forwardSlashSpeed = 150;
+const backwardSlashSpeed = 80;
+
+// Call the typingEffect function with the provided parameters
 typingEffect(
-  ["Hello", "World", "This is the", "simple-typing-effect", "package"],
-  "wrapper",
-  {
-    textColor: "blue",
-    cursorColor: "white",
-    width: "2px",
-    height: "2rem",
-  },
-  118,
-  65
+  arrOfWords,
+  wrapperId,
+  options,
+  forwardSlashSpeed,
+  backwardSlashSpeed
 );
 ```
 
-In this example, the words "Hello", "World", "This is the", "simple-typing-effect" and "package" will be typed out in the HTML element with the ID 'wrapper', using the specified options and speeds.
+In this example, the typing effect will render the array of words one after the other with a purple text color and a red typing cursor. The cursor will have a width of 3 pixels and a height of 1.5 rem. The typing speed for adding characters will be 150 milliseconds, and the deleting speed will be 80 milliseconds.
+
+## Credits
+
+This NPM package was developed by Tobiloba Odukoya.
