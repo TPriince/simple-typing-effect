@@ -3,7 +3,7 @@ function typingEffect(
   wrapperId,
   options = {
     textColor: "black",
-    cursorColor: "white",
+    cursorColor: "black",
     width: "2px",
     height: "1rem",
   },
@@ -17,7 +17,7 @@ function typingEffect(
   const text = document.createElement("p");
   const cursor = document.createElement("span");
   text.style.color = options.textColor || "black";
-  cursor.style.backgroundColor = options.cursorColor || "white";
+  cursor.style.backgroundColor = options.cursorColor || "black";
   cursor.style.marginLeft = "0.25rem";
   cursor.style.width = options.width || "2px";
   cursor.style.height = options.height || "1rem";

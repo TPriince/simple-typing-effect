@@ -23,7 +23,7 @@ npm install simple-typing-effect
 To use simple-typing-effect, you need to import the package and call the typingEffect function with the required parameters.
 
 ```javascript
-import typingEffect from "simple-typing-effect";
+import { typingEffect } from "simple-typing-effect";
 
 const arrayOfWords = ["Hello", "World", "simple-typing-effect", "npm package"];
 const wrapperId = "typing-wrapper"; // id of the wrapper element in your HTML
@@ -31,7 +31,7 @@ const wrapperId = "typing-wrapper"; // id of the wrapper element in your HTML
 // Customize options if needed (optional)
 const options = {
   textColor: "black",
-  cursorColor: "white",
+  cursorColor: "black",
   width: "2px",
   height: "1rem",
 };
