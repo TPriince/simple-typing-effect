@@ -74,4 +74,4 @@ function typingEffect(
   }, 2000);
 }
 
-module.exports = typingEffect;
+module.exports.typingEffect = typingEffect;
