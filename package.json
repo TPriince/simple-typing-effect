@@ -1,6 +1,6 @@
 {
   "name": "simple-typing-effect",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple typewriter effect package",
   "main": "index.js",
   "scripts": {
