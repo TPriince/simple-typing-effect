@@ -40,8 +40,7 @@ To use simple-typing-effect, you need to import the package and call the typingE
 import { typingEffect } from "simple-typing-effect";
 
 const arrayOfWords = [
-  "Hello",
-  "World!",
+  "Hello World!",
   "This is the",
   "simple-typing-effect",
   "npm package",
