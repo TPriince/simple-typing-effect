@@ -39,7 +39,13 @@ To use simple-typing-effect, you need to import the package and call the typingE
 ```javascript
 import { typingEffect } from "simple-typing-effect";
 
-const arrayOfWords = ["Hello", "World", "simple-typing-effect", "npm package"];
+const arrayOfWords = [
+  "Hello",
+  "World!",
+  "This is the",
+  "simple-typing-effect",
+  "npm package",
+];
 const wrapperId = "typing-wrapper"; // id of the wrapper element in your HTML
 
 // Customize options if needed (optional)
@@ -107,13 +113,7 @@ In your `index.js`
 ```javascript
 import { typingEffect } from "simple-typing-effect";
 
-const arrayOfWords = [
-  "Welcome",
-  "to",
-  "the",
-  "simple-typing-effect",
-  "npm package",
-];
+const arrayOfWords = ["Welcome to the", "simple-typing-effect", "npm package"];
 const wrapperId = "typing-wrapper"; // id of the wrapper element in your HTML
 
 // Customize options (optional)
