@@ -5,10 +5,11 @@
 ## Table of Contents
 
 1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Parameters](#parameters)
-4. [Example](#example)
-5. [Credits](#credits)
+2. [Syntax](#syntax)
+3. [Usage](#usage)
+4. [Parameters](#parameters)
+5. [Example](#example)
+6. [Credits](#credits)
 
 ## Installation
 
@@ -16,6 +17,19 @@ You can install `simple-typing-effect` via npm by running the following command:
 
 ```shell
 npm install simple-typing-effect
+```
+
+## Syntax
+
+```javascript
+typingEffect(
+  arrayOfWords,
+  wrapperId,
+  options,
+  forwardSlashSpeed,
+  backwardSlashSpeed,
+  infinite
+);
 ```
 
 ## Usage
@@ -40,13 +54,17 @@ const options = {
 const forwardSlashSpeed = 118;
 const backwardSlashSpeed = 65;
 
-// Call the typingEffect function with the provided parameters
+// Customize repetition (optional)
+const infinite = true;
+
+// Call the typingEffect function with the provided parameters (optional)
 typingEffect(
   arrayOfWords,
   wrapperId,
   options,
   forwardSlashSpeed,
-  backwardSlashSpeed
+  backwardSlashSpeed,
+  infinite
 );
 ```
 
@@ -63,13 +81,30 @@ The typingEffect function accepts the following parameters:
 - height (string, default: "1rem"): The height of the typing cursor.
 - forwardSlashSpeed (number, default: 118): The speed of typing forward slash characters (in milliseconds).
 - backwardSlashSpeed (number, default: 65): The speed of typing backward slash characters (in milliseconds).
+- infinite (boolean, default: true): Determines whether the typing effect should repeat infinitely.
 
 ## Example
 
 Here's an example of how to use typingEffect:
+In your `index.html`
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Typing Effect Example</title>
+  </head>
+  <body>
+    <div id="typing-wrapper"></div>
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
+```
+
+In your `index.js`
 
 ```javascript
-import typingEffect from "simple-typing-effect";
+import { typingEffect } from "simple-typing-effect";
 
 const arrayOfWords = [
   "Welcome",
@@ -92,13 +127,17 @@ const options = {
 const forwardSlashSpeed = 150;
 const backwardSlashSpeed = 80;
 
+// Customize repetition (optional)
+const infinite = false;
+
 // Call the typingEffect function with the provided parameters
 typingEffect(
   arrayOfWords,
   wrapperId,
   options,
   forwardSlashSpeed,
-  backwardSlashSpeed
+  backwardSlashSpeed,
+  infinite
 );
 ```
 
