@@ -86,6 +86,7 @@ The typingEffect function accepts the following parameters:
 ## Example
 
 Here's an example of how to use typingEffect:
+
 In your `index.html`
 
 ```html
