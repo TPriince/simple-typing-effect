@@ -1,12 +1,7 @@
 function typingEffect(
   arrayOfWords,
   wrapperId,
-  options = {
-    textColor: "black",
-    cursorColor: "black",
-    width: "2px",
-    height: "1rem",
-  },
+  options,
   forwardSlashSpeed = 118,
   backwardSlashSpeed = 60,
   infinite = true
@@ -16,11 +11,11 @@ function typingEffect(
   wrapper.style.alignItems = "center";
   const text = document.createElement("p");
   const cursor = document.createElement("span");
-  text.style.color = options.textColor || "black";
-  cursor.style.backgroundColor = options.cursorColor || "black";
+  text.style.color = options?.textColor || "black";
+  cursor.style.backgroundColor = options?.cursorColor || "black";
   cursor.style.marginLeft = "0.25rem";
-  cursor.style.width = options.width || "2px";
-  cursor.style.height = options.height || "1rem";
+  cursor.style.width = options?.width || "2px";
+  cursor.style.height = options?.height || "1rem";
   cursor.animate(
     { opacity: [0, 1] },
     { duration: 1000, iterations: Infinity, easing: "linear" }
